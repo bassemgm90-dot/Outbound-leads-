@@ -30,3 +30,16 @@ Every morning, a scheduled Claude Routine pulls **fresh, deduplicated decision m
 
 ## Control
 Ask Claude: "pause / resume / change the time of my Daily Lusha Leads routine." You can also manage it under Routines on claude.ai/code.
+
+---
+
+# Job Search: Daily LinkedIn Shortlist
+
+Each morning (07:56 Dubai) a Routine reads the LinkedIn job emails in Gmail and scores every new job against `config/job_scope.json`. It emails a shortlist to bassem.gm90@gmail.com with a fit score, the risk a recruiter will see, and a ready-to-paste pitch. **It never applies on its own.** Applications go through Claude in Chrome in your own logged-in browser, and you click submit.
+
+- `config/job_scope.json`: target titles, company sizes, markets, exclusions. Edit this to retarget.
+- `profile/candidate.md`: positioning and proof points used in pitches (no personal details).
+- `prompts/daily-jobs-run.md`: the run instructions.
+- `jobs/pipeline.csv`: tracker (shortlisted → applied → interview → offer/rejected).
+- `jobs/seen_job_ids.txt`: dedupe ledger.
+- `jobs/shortlist/YYYY-MM-DD.md`: each day's shortlist.

@@ -1,0 +1,52 @@
+{
+  "owner": "Bassem",
+  "based_in": "Dubai, UAE",
+  "schedule": "Every day, 07:56 Asia/Dubai",
+  "deliver_to": "bassem.gm90@gmail.com",
+  "shortlist_max_per_day": 15,
+  "min_score_to_shortlist": 6,
+
+  "target_tiers": {
+    "A_leadership_midsize": {
+      "titles": ["Sales Manager", "Commercial Director", "Head of Sales", "Sales Director", "Regional Sales Manager", "Business Development Director", "Commercial Manager"],
+      "company_size": { "min": 100, "max": 300 },
+      "note": "Leadership roles only at mid-size companies. If the company is much smaller, cap the score at 5. If it's much larger, re-check it as tier B."
+    },
+    "B_senior_ic_large_vendor": {
+      "titles": ["Senior Business Development Manager", "Senior BDM", "Sales Team Leader", "Team Lead - Sales", "Senior Account Executive", "Mid-Market Account Executive", "Enterprise Account Executive", "Partner Sales Manager", "Channel Manager"],
+      "company_size": { "min": 1000 },
+      "company_type": "Software / SaaS vendors about Odoo's size or bigger (Salesforce, Microsoft, SAP, Oracle, Zoho, HubSpot, ServiceNow, Workday, Cloudflare, etc.)"
+    },
+    "C_adjacent": {
+      "titles": ["ERP Sales Manager", "CRM Sales Manager", "Digital Transformation Sales Lead", "Business Development Manager - ERP/SaaS", "Head of Partnerships"],
+      "note": "Relevant roles that don't fit A or B exactly. Score them on merit."
+    }
+  },
+
+  "markets": {
+    "primary": ["United Arab Emirates"],
+    "secondary": ["Saudi Arabia", "Qatar"],
+    "remote_ok": "Remote or regional MENA/GCC roles",
+    "exclude": "Egypt-based roles unless they're regional MENA or remote"
+  },
+
+  "boost": [
+    "ERP / CRM / SaaS / B2B software",
+    "Manages a team or a regional P&L",
+    "Full-cycle new-logo selling to SMB and mid-market",
+    "Arabic speaker preferred, or GCC experience required",
+    "Industries he has sold into: construction, manufacturing, hospitality, industrial"
+  ],
+
+  "exclude": {
+    "companies": ["Odoo"],
+    "title_keywords": ["SDR", "BDR", "Sales Development Representative", "Junior", "Intern", "Associate", "Inside Sales Executive", "Telesales", "Retail", "Showroom", "Property Consultant", "Real Estate Agent", "Insurance Advisor", "Recruitment Consultant"],
+    "other": "Commission-only roles, and pure marketing, pre-sales or customer-success roles with no revenue quota."
+  },
+
+  "lusha_hiring_manager_lookup": {
+    "enabled": false,
+    "max_per_day": 5,
+    "note": "Off until the shortlist quality is proven. When it's on, look up the hiring manager only for jobs scored 8 or higher, and only reveal emails (1 credit each)."
+  }
+}
