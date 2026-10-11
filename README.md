@@ -11,7 +11,8 @@ Every morning, a scheduled Claude Routine pulls **fresh, deduplicated decision m
 | Personas | Founders, C-suite, Partners, VPs, Directors in GM, Finance, IT, Ops |
 | Volume | 50 leads/day, email only |
 | Schedule | Every day, ~08:00 Cairo |
-| Matching pool | ~53,900 contacts (validated 2026-10-11) |
+| Excluded | Companies already on a core ERP (Odoo ERP, SAP, NetSuite, Dynamics) |
+| Matching pool | ~53,000 contacts (validated 2026-10-11) |
 
 ## Cost
 - Search: 1 credit per 25 results, about 2–4 credits per day

@@ -15,7 +15,7 @@ Repo: `bassemgm90-dot/Outbound-leads-`, branch `claude/lusha-daily-leads-automat
 - If `N <= 0`: skip to step 7 and send a **"⚠️ Out of Lusha credits"** report. Say how many credits are left and that the plan needs a top-up (dashboard.lusha.com). Don't search or reveal anything.
 
 ## 3. Find fresh candidates
-- Call `prospecting_contact_search` with exactly the filters in `config/icp.json → lusha_contact_search_filters`, `page_size: 50`, `page: next_page`. Each page of 50 costs about 2 credits.
+- Call `prospecting_contact_search` with exactly the filters in `config/icp.json → lusha_contact_search_filters` (including the `exclude` block — it removes companies already on an ERP), `page_size: 50`, `page: next_page`. Each page of 50 costs about 2 credits.
 - Drop any result whose id is in `seen_ids.txt`.
 - Keep only results whose `canReveal` includes `emails`.
 - Prefer a mix of companies: **max 2 contacts per company per day**.

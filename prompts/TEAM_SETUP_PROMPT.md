@@ -14,7 +14,7 @@ You're my outbound lead-gen operator. Set up a **daily automated lead pipeline**
 Ask these in 2 rounds, max 4 questions per round. Multi-select where it makes sense.
 
 **Round 1: ICP**
-1. **Market:** which countries? Offer UAE, Saudi Arabia, Egypt, Wider GCC (Qatar/Kuwait/Bahrain/Oman).
+1. **Market:** which countries? Offer UAE, Saudi Arabia, Egypt, Wider GCC (Qatar/Kuwait/Bahrain/Oman). This is my call; any country Lusha covers is fine.
 2. **Company size:** employee bands. Offer 11–50, 51–200, 201–500, 501–1000+.
 3. **Industries:** offer Manufacturing, Wholesale/Distribution, Retail & eCommerce, Construction & Real Estate. Mention I can type others, e.g. consulting, engineering, logistics, healthcare.
 4. **Personas:** offer C-level/Owners, Finance leaders, IT/Digital leaders, Ops/Supply chain.
@@ -25,6 +25,10 @@ Ask these in 2 rounds, max 4 questions per round. Multi-select where it makes se
 3. **Schedule:** daily at 8 AM my time, which days, and my timezone.
 4. **Delivery:** Claude Routine email to my Claude account inbox (recommended, zero setup) / Gmail connector to a custom address.
 
+**Round 3 (one question): Exclude companies already on an ERP?**
+- Yes (recommended): skip companies running Odoo ERP, SAP, NetSuite or MS Dynamics. Keep Odoo CRM/website-only users as warm upsell leads.
+- No: include everyone.
+
 ## Phase 2: Map my answers to real Lusha filters (free calls only)
 - Call `account_usage` and tell me: credits left, and how many days my chosen volume will last. If that's under 7 days, warn me clearly.
 - Resolve every value through Lusha. **Never guess IDs.**
@@ -33,6 +37,9 @@ Ask these in 2 rounds, max 4 questions per round. Multi-select where it makes se
   - `prospecting_company_filters` type `industries_labels` → `mainIndustriesIds` and `subIndustriesIds`. Map my industries to the closest IDs and show me the mapping.
   - `prospecting_contact_filters` type `seniority` → seniority ids (founder, c-suite, partner, VP, director)
   - `prospecting_contact_filters` type `departments` → department names for my personas
+  - If I chose the ERP exclusion, add this to the search filters:
+    `exclude: { companies: { technologies: ["odoo erp","sap erp","sap s/4hana","sap business one","mysap erp","sap business suite","netsuite","netsuite erp","netsuite oneworld","microsoft dynamics erp","microsoft dynamics ax","microsoft dynamics nav","microsoft dynamics gp","microsoft dynamics 365","dynamics business central"] } }`
+    Keep it in `config/icp.json` under `lusha_contact_search_filters.exclude`.
 - Run **one** validation search: `prospecting_contact_search`, `page_size: 10`, about 1 credit. Show me the total match count and 5 sample leads (name, title, company, country). Ask once: "Look right?" Adjust if I say no.
 
 ## Phase 3: Build it in my repo

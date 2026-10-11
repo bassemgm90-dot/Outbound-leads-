@@ -1,22 +1,74 @@
 {
   "owner": "Bassem",
   "leads_per_day": 50,
-  "reveal": ["emails"],
+  "reveal": [
+    "emails"
+  ],
   "schedule": "Every day, 08:00 Africa/Cairo",
   "delivery": "Claude Routine email notification (Claude account inbox)",
-
   "lusha_contact_search_filters": {
-    "countries": ["AE", "SA", "EG"],
-    "sizesFilterOption": [
-      { "min": 11, "max": 50 },
-      { "min": 51, "max": 200 }
+    "countries": [
+      "AE",
+      "SA",
+      "EG"
     ],
-    "mainIndustriesIds": [3, 12, 15, 16],
-    "subIndustriesIds": [97, 96, 100, 124],
-    "seniority": [10, 9, 7, 8, 6],
-    "departments": ["General Management", "Finance", "Information Technology", "Operations"]
+    "sizesFilterOption": [
+      {
+        "min": 11,
+        "max": 50
+      },
+      {
+        "min": 51,
+        "max": 200
+      }
+    ],
+    "mainIndustriesIds": [
+      3,
+      12,
+      15,
+      16
+    ],
+    "subIndustriesIds": [
+      97,
+      96,
+      100,
+      124
+    ],
+    "seniority": [
+      10,
+      9,
+      7,
+      8,
+      6
+    ],
+    "departments": [
+      "General Management",
+      "Finance",
+      "Information Technology",
+      "Operations"
+    ],
+    "exclude": {
+      "companies": {
+        "technologies": [
+          "odoo erp",
+          "sap erp",
+          "sap s/4hana",
+          "sap business one",
+          "mysap erp",
+          "sap business suite",
+          "netsuite",
+          "netsuite erp",
+          "netsuite oneworld",
+          "microsoft dynamics erp",
+          "microsoft dynamics ax",
+          "microsoft dynamics nav",
+          "microsoft dynamics gp",
+          "microsoft dynamics 365",
+          "dynamics business central"
+        ]
+      }
+    }
   },
-
   "_labels": {
     "countries": "United Arab Emirates, Saudi Arabia, Egypt",
     "sizes": "11-50, 51-200 employees",
@@ -39,11 +91,12 @@
       "8": "Vice President",
       "6": "Director"
     },
-    "departments": "Owners/GMs, Finance, IT/Digital, Operations/Supply chain"
+    "departments": "Owners/GMs, Finance, IT/Digital, Operations/Supply chain",
+    "exclude": "Companies already running a core ERP (Odoo ERP, SAP, NetSuite, MS Dynamics). Odoo CRM/website-only users are kept as warm upsell targets."
   },
-
   "validated": {
     "date": "2026-10-11",
-    "total_matching_contacts": 53940
+    "total_matching_contacts": 53036,
+    "note": "after ERP exclusion (was 53,940)"
   }
 }
