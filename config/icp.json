@@ -1,0 +1,49 @@
+{
+  "owner": "Bassem",
+  "leads_per_day": 50,
+  "reveal": ["emails"],
+  "schedule": "Every day, 08:00 Africa/Cairo",
+  "delivery": "Claude Routine email notification (Claude account inbox)",
+
+  "lusha_contact_search_filters": {
+    "countries": ["AE", "SA", "EG"],
+    "sizesFilterOption": [
+      { "min": 11, "max": 50 },
+      { "min": 51, "max": 200 }
+    ],
+    "mainIndustriesIds": [3, 12, 15, 16],
+    "subIndustriesIds": [97, 96, 100, 124],
+    "seniority": [10, 9, 7, 8, 6],
+    "departments": ["General Management", "Finance", "Information Technology", "Operations"]
+  },
+
+  "_labels": {
+    "countries": "United Arab Emirates, Saudi Arabia, Egypt",
+    "sizes": "11-50, 51-200 employees",
+    "mainIndustriesIds": {
+      "3": "Construction (building, civil engineering, specialty contractors)",
+      "12": "Manufacturing",
+      "15": "Real Estate",
+      "16": "Retail & Wholesale Trade (incl. Wholesale Import & Export)"
+    },
+    "subIndustriesIds": {
+      "97": "Business Consulting & Services",
+      "96": "Architecture & Planning (engineering consultancies)",
+      "100": "Outsourcing & Offshoring Consulting",
+      "124": "E-Commerce & Marketplace"
+    },
+    "seniority": {
+      "10": "Founder",
+      "9": "C-suite",
+      "7": "Partner",
+      "8": "Vice President",
+      "6": "Director"
+    },
+    "departments": "Owners/GMs, Finance, IT/Digital, Operations/Supply chain"
+  },
+
+  "validated": {
+    "date": "2026-10-11",
+    "total_matching_contacts": 53940
+  }
+}
