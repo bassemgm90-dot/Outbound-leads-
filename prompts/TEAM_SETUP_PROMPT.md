@@ -76,8 +76,9 @@ Commit and push.
   - `initiation: "human_request"`
   - Name: `Daily Lusha Leads — <my name>`
   - Prompt (standalone): "Daily lead run. Attach repo `<owner>/<repo>` with add_repo if it isn't present, clone it, check out branch `<branch>`, then follow `prompts/daily-run.md` exactly. Lusha connector tools are available. End with the report from step 7."
+- Pass `connectors: ["Lusha"]` (plus `"Gmail"` if chosen). If the call rejects the `connectors` param, or warns that the routine "stores no MCP connectors", tell me plainly: I must open claude.ai/code → Routines → edit my routine → add the Lusha connector. Without it, the run has no Lusha access. Don't fire the routine until I confirm I've done that.
 - If I picked Gmail delivery, the run should also send the report as an email via the Gmail connector to my chosen address. Tell me to connect Gmail first if it isn't connected.
-- Then fire the routine **once now** with `fire_trigger`, so I get today's batch and can confirm delivery works.
+- Once Lusha is attached to the routine, fire it **once now** with `fire_trigger`, so I get today's batch and can confirm delivery works.
 
 ## Phase 5: Hand-off
 Reply with a short summary covering:
