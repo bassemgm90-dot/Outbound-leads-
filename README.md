@@ -1,5 +1,7 @@
 # Outbound Leads — Daily Lusha Pipeline
 
+> **Status: STOPPED (2026-10-15).** The Lusha subscription was not renewed, and the daily Routine has been deleted. Nothing runs and no emails are sent.
+
 Every morning, a scheduled Claude Routine pulls **fresh, deduplicated decision makers** from Lusha. It reveals their business emails, writes a tailored ERP opening angle for each lead, and emails you the list.
 
 ## Current ICP (Bassem)
